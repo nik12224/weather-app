@@ -1,0 +1,83 @@
+@import './reset.css';
+@import './components/header.css';
+@import './components/main.css';
+@import './components/fact.css';
+@import './components/forecast.css';
+@import './components/slider.css';
+@import './components/footer.css';
+
+:root {
+	--border-radius: 8px;
+	--color-text-card: #202020;
+	--font-weight-bold: 700;
+	--background-card: rgba(245, 244, 244, 0.4);
+	--gap-forecast: 16px;
+}
+
+.app {
+	background: url('../../public/background.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 32px 80px;
+}
+
+.container {
+	background-color: rgba(112, 112, 112, 0.1);
+	backdrop-filter: blur(25px);
+	border-radius: var(--border-radius);
+	max-width: 1120px;
+	width: 100%;
+	/* min-height: 860px; */
+	padding: 32px;
+}
+
+@media (min-width: 280px) {
+	.container {
+		padding: 8px;
+	}
+	.app {
+		padding: 8px;
+	}
+}
+
+@media (min-width: 375px) {
+	.container {
+		padding: 16px;
+	}
+	.app {
+		padding: 16px;
+	}
+}
+
+@media (min-width: 768px) {
+	.app {
+		padding: 24px;
+	}
+
+	.container {
+		padding: 24px;
+	}
+}
+
+@media (min-width: 886px) {
+	.container {
+		padding: 24px;
+		max-width: 1120px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.app {
+		padding: 32px;
+	}
+
+	.container {
+		padding: 32px;
+	}
+}

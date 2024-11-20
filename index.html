@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WeatherApp 1</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./src/styles/style.css" />
+	</head>
+	<body>
+		<div class="app">
+			<div class="container">
+				<header class="header">
+					<a href="#" class="header__logo">
+						<picture>
+							<source srcset="./public/logo-375.svg" media="(max-width: 640px)" />
+							<source srcset="./public/logoMin.svg" media="(max-width: 886px)" />
+							<img src="./public/logo.svg" alt="Логотип" />
+						</picture>
+					</a>
+					<div class="header__search">
+						<input class="header__filed" type="text" placeholder="Поиск по городу" />
+						<picture>
+							<source srcset="./public/magnifer-375.svg" media="(max-width: 768px)" />
+							<img class="header__magnifer" src="./public/magnifier.svg" alt="Найти" />
+						</picture>
+						<div class="header__search--clear"></div>
+					</div>
+				</header>
+				<main class="main">
+					<div class="fact">
+						<div class="fact__block">
+							<b class="main__sity">Кременчуг-<br class="main__sity--br" />константиновское</b>
+							<span class="main__fact-date">Суббота, 06 января</span>
+							<span class="main__fact-time">11:29</span>
+						</div>
+
+						<div class="main__temp-value">-7°</div>
+						<div class="fact__block">
+							<span class="main__condition">
+								<picture>
+									<source
+										srcset="./public/icons/media/clouds--media.svg"
+										media="(max-width: 640px)"
+									/>
+									<img src="./public/clouds.svg" alt="Облачно" />
+								</picture>
+								Облачно с прояснениями
+							</span>
+							<span class="main__feeling">Ощущается как -11°</span>
+						</div>
+					</div>
+
+					<div class="forecast"></div>
+				</main>
+				<section class="slider">
+					<div class="slider__forecast-block">
+						<b class="slider__forecast">Прогноз:</b>
+						<div class="slider__nav slider__nav--for24">на 24 часа</div>
+						<div class="slider__nav slider__nav--for5">на 5 дней</div>
+					</div>
+					<div class="slider__block">
+						<button class="slider__button slider__button--prev" disabled>
+							<picture>
+								<source srcset="./public/icons/media/prev--media.svg" media="(max-width: 768px)" />
+								<img src="./public/icons/prev.svg" alt="Предыдущий слайд." />
+							</picture>
+						</button>
+						<ul class="slider__list slider__list--for24"></ul>
+						<ul class="slider__list slider__list--for5"></ul>
+						<button class="slider__button slider__button--next">
+							<picture>
+								<source srcset="./public/icons/media/next--media.svg" media="(max-width: 768px)" />
+								<img src="./public/icons/next.svg" alt="Следующий слайд." />
+							</picture>
+						</button>
+					</div>
+				</section>
+				<footer class="footer">
+					<p class="footer__text">
+						Проект выполнен в рамках стажировки
+						<a class="footer__link" href="https://preax.ru" target="_blank">PREAX</a>
+					</p>
+				</footer>
+			</div>
+		</div>
+		<script type="module" src="./src/js/script.js"></script>
+	</body>
+</html>
